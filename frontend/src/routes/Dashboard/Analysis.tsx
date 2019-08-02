@@ -3,7 +3,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators, Dispatch} from 'redux';
 import {getOrganizationIfNeeded} from '../../actions/organization';
-import {OrganizationDetails} from '../../components/Dashboard';
 import Exception from '../../components/Exception/Exception';
 import * as exceptionTypes from '../../constants/exceptionTypes';
 import '../../index.css';
@@ -11,6 +10,7 @@ import {getAuthDetails} from '../../reducers/auth';
 import {getOrganization} from '../../reducers/organization';
 import * as stateTypes from '../../reducers/types';
 import './Analysis.css';
+import {WrappedDogForm as DogForm} from '../../components/DogForm/DogForm';
 
 interface StateProps {
   auth: stateTypes.AuthDetails;
@@ -59,11 +59,7 @@ class Analysis extends React.PureComponent<AnalysisProps> {
           <Card title={`${organizationTitle} Dashboard`} className={'card'} bordered={true}>
             <div>
               <Row>
-                <h1>Hello!</h1>
-              </Row>
-              <Row>
-                <span>This is a pie chart:</span>
-                <OrganizationDetails data={{percent: 30}} />
+                <DogForm />
               </Row>
             </div>
           </Card>

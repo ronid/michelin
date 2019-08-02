@@ -6,6 +6,7 @@ import {Provider} from 'react-redux';
 import {ConnectedRouter} from 'react-router-redux';
 import MichelinApp from './App';
 import './index.css';
+import 'antd/dist/antd.css';
 import registerServiceWorker from './registerServiceWorker';
 import {store} from './store';
 import {history} from './store/history';
